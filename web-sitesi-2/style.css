@@ -1,0 +1,351 @@
+/* google font dan yazı tipi bağlantısı */
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Montserrat:ital,wght@0,400;1,300&family=Poppins:wght@300;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Montserrat:ital,wght@0,400;1,300&family=Poppins:wght@300;500;600;700;800;900&display=swap');
+
+/* ! Resetleme Kodları */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+section,
+span,
+p {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+}
+
+/* Header --------------------------------------------------------------------*/
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    background-image: url("image/sss.jpg");
+    background-position: center;
+    /* ortalama */
+    background-size: cover;
+    /* sayfayı kaplaması */
+    background-attachment: fixed;
+    /* sayfada sabit kalması */
+    height: 100vh;
+    /* sayfayı açtığımızda gördüğümüz ekranı kaplaması */
+}
+
+.header-navbar {
+    display: flex;
+    /* aynı sıraya getir */
+    align-items: center;
+    /* ortala */
+    justify-content: space-between;
+    /* birbirinden ayır */
+    padding: 40px 0;
+    /* içindeki değerlerin kenarlara boşluğu */
+}
+
+.header-logo {
+    font-size: 16px;
+    letter-spacing: 2px;
+    /* harfler arası boşluk */
+    border-bottom: 5px solid #000;
+    border-radius: 35px;
+    /* kenarları yuvarlak hale getiriyor */
+    padding-bottom: 5px;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    margin-left: 27px;
+}
+
+a {
+    color: #000;
+    font-weight: bold;
+    /* yazı gemişliği kalın */
+    font-size: 15px;
+    /* yazı kalınlığı */
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* hizalama */
+}
+
+h1 {
+    font-size: 8.5rem;
+    font-weight: 100;
+    line-height: 0.4;
+    /* satır bışluğu */
+    letter-spacing: 2px;
+    /* harfler arası boşluk */
+    font-family: 'Courier New', Courier, monospace, cursive;
+}
+
+.btn-nature {
+    display: block;
+    /* tüm satırı kaplıyor */
+    width: 30%;
+    margin-top: 20%;
+    margin-left: 130px;
+    background-color: #4d9da1;
+    color: #fff;
+    padding: 10px 15px;
+    border-top-left-radius: 35px;
+    /* yukardan */
+    border-bottom-right-radius: 35px;
+    /* aşşağıdan */
+    overflow: hidden;
+    /* taşmaları engellemek için kullanılır */
+}
+
+/*ABOUT ---------------------------------------------------------------------*/
+.about {
+    margin-bottom: 150px;
+}
+
+.about-title {
+    margin: 60px 0;
+}
+
+.about-title h2 {
+    width: 100%;
+    text-align: center;
+    /* yazının ortalanması */
+    margin: 0 auto;
+    color: #000;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.about-title h2::after {
+    content: "";
+    width: 40px;
+    height: 3px;
+    background-color: #000;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* birbirinden ayırma */
+}
+
+.about-img {
+    width: 40%;
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+        /* en boy oranını korumak için */
+    ;
+}
+
+.about-text {
+    width: 40%;
+}
+
+h4 {
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 40px;
+    color: #000;
+    font-family: 'Courier New', Courier, monospace, cursive;
+    font-weight: 100;
+}
+
+#asteriks {
+    color: #106a6f;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.about-text p {
+    font-size: 15px;
+    text-align: center;
+    color: #323232;
+}
+
+/* Portfolyo---------------------------------------------------------------------- */
+.portfolyo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolyo-items {
+    width: 25%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolyo-items img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #106a6f;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0.8;
+    color: #fff;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.portfolyo-items:hover .overlay {
+    top: 0;
+}
+
+.portfolyo-items:hover img {
+    transform: scale(1.1);
+}
+
+/* Contact---------------------------------------------------------------------- */
+.contact {
+    padding: 10px 0;
+}
+
+.contact h2 {
+    width: 100%;
+    text-align: center;
+    /* yazının ortalanması */
+    margin: 0 auto;
+    color: #000;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.contact h2::after {
+    content: "";
+    width: 40px;
+    height: 3px;
+    background-color: #000;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-content {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    flex-basis: 33%;
+    /* sayfada div içindeki her biri %33 lük yer kaplasın */
+    margin-bottom: 100px;
+    flex-direction: column;
+    /* kolon şeklinde durması için */
+}
+
+.contact-item i {
+    font-size: 25px;
+    /* boyutu ayarlama */
+    margin-bottom: 8%;
+    color: #000;
+}
+
+.contact-item p {
+    font-size: 15px;
+    color: #2e2d2d;
+}
+
+/* FOOTER------------------------------------------------------------------------------- */
+.footer h2 {
+    width: 100%;
+    text-align: center;
+    /* yazının ortalanması */
+    margin: 0 auto;
+    padding: 55px 0;
+
+    color: #700505;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.footer h2::after {
+    content: "";
+    width: 40px;
+    height: 3px;
+    background-color: #700505;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+}
+
+.footer {
+    background-color: #000;
+}
+
+.footer p {
+    color: #fff;
+    text-align: center;
+    flex-basis: 55%;
+    margin-bottom: 25px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer2 i {
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 50px;
+    padding: 0 40px;
+}
+
+#menu-icon {
+    font-size: 25px;
+    display: none;
+}
